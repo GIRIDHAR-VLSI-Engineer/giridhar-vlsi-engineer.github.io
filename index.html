@@ -1,181 +1,407 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GIRIDHAR S | VLSI & Embedded Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Outfit:wght@300;600;800&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --bg: #0a0b10;
-            --card-bg: #161b22;
-            --accent: #32ff7e; /* Neon Lime */
-            --text-main: #ffffff;
-            --text-dim: #8b949e;
-            --border: #30363d;
-        }
-
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { 
-            background-color: var(--bg); 
-            color: var(--text-main); 
-            font-family: 'Outfit', sans-serif;
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-
-        /* Hero Section - Fixed Image Fit */
-        .hero {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 2rem;
-            flex-direction: column-reverse;
-            gap: 2rem;
-        }
-
-        @media (min-width: 768px) {
-            .hero { flex-direction: row; justify-content: space-around; text-align: left; }
-        }
-
-        .hero-text h1 { font-size: clamp(2.5rem, 8vw, 4rem); font-weight: 800; line-height: 1; margin-bottom: 1rem; }
-        .hero-text span { color: var(--accent); font-family: 'JetBrains Mono', monospace; }
-
-        .profile-container {
-            width: 280px;
-            height: 350px;
-            border: 2px solid var(--accent);
-            border-radius: 20px;
-            overflow: hidden;
-            background: var(--card-bg);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .profile-container img {
-            width: 100%;
-            height: 100%;
-            object-fit: contain; /* FIX: Shows the whole photo */
-            background: #000;
-        }
-
-        /* Project Gallery - Fitting all images */
-        .section-title { padding: 4rem 2rem 1rem; text-align: center; font-size: 2rem; color: var(--accent); }
-
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1.5rem;
-            padding: 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .gallery-card {
-            background: var(--card-bg);
-            border: 1px solid var(--border);
-            border-radius: 12px;
-            overflow: hidden;
-            transition: transform 0.3s ease;
-        }
-
-        .gallery-card:hover { transform: translateY(-10px); border-color: var(--accent); }
-
-        .img-box {
-            width: 100%;
-            height: 250px;
-            background: #000;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .img-box img {
-            max-width: 100%;
-            max-height: 100%;
-            object-fit: contain; /* FIX: Prevents hardware from being cut */
-        }
-
-        .card-content { padding: 1.5rem; }
-        .card-content h3 { color: var(--accent); margin-bottom: 0.5rem; }
-
-        /* Tech Tags */
-        .tag {
-            display: inline-block;
-            padding: 4px 10px;
-            background: rgba(50, 255, 126, 0.1);
-            color: var(--accent);
-            border-radius: 4px;
-            font-size: 0.8rem;
-            margin: 5px 5px 0 0;
-            font-family: 'JetBrains Mono', monospace;
-        }
-
-        nav { padding: 1.5rem; position: absolute; top: 0; width: 100%; display: flex; justify-content: space-between; font-family: 'JetBrains Mono'; }
-        .btn { border: 1px solid var(--accent); color: var(--accent); padding: 10px 20px; text-decoration: none; border-radius: 5px; transition: 0.3s; }
-        .btn:hover { background: var(--accent); color: var(--bg); }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Giridhar S — VLSI & Embedded Engineer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Fraunces:wght@700;900&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #080d1a;
+  --bg2: #0d1526;
+  --bg3: #131e30;
+  --bg4: #1a2640;
+  --accent: #ff4d4d;
+  --accent2: #ff7c5c;
+  --accent3: #ffd166;
+  --text: #e8eef8;
+  --text2: #7a90b0;
+  --text3: #3a506b;
+  --border: rgba(100,140,200,0.1);
+  --card: rgba(30,58,95,0.15);
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { font-family: 'Space Grotesk', sans-serif; background: var(--bg); color: var(--text); overflow-x: hidden; }
+body::after {
+  content: '';
+  position: fixed; inset: 0;
+  background-image: linear-gradient(rgba(100,140,255,0.02) 1px, transparent 1px), linear-gradient(90deg, rgba(100,140,255,0.02) 1px, transparent 1px);
+  background-size: 40px 40px;
+  pointer-events: none; z-index: 0;
+}
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  padding: 1rem 5rem;
+  display: flex; justify-content: space-between; align-items: center;
+  background: rgba(8,13,26,0.92); backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border);
+}
+.nav-logo { font-family: 'JetBrains Mono', monospace; font-weight: 500; font-size: 1rem; color: var(--accent); }
+.nav-logo span { color: var(--text2); }
+.nav-links { display: flex; gap: 2.5rem; list-style: none; }
+.nav-links a { font-size: 0.78rem; font-weight: 500; color: var(--text2); text-decoration: none; letter-spacing: 1px; text-transform: uppercase; transition: color 0.2s; }
+.nav-links a:hover { color: var(--text); }
+.hero {
+  min-height: 100vh;
+  display: grid; grid-template-columns: 1.2fr 1fr; align-items: center;
+  padding: 7rem 5rem 5rem; position: relative; gap: 5rem; z-index: 1;
+}
+.hero-glow { position: absolute; width: 500px; height: 500px; border-radius: 50%; background: radial-gradient(circle, rgba(255,77,77,0.07) 0%, transparent 70%); right: 10%; top: 50%; transform: translateY(-50%); pointer-events: none; }
+.hero-content { position: relative; z-index: 1; }
+.hero-tag {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: rgba(255,77,77,0.08); border: 1px solid rgba(255,77,77,0.25); border-radius: 6px;
+  padding: 6px 14px; font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; color: var(--accent);
+  letter-spacing: 0.5px; margin-bottom: 1.5rem;
+}
+.hero-tag::before { content: ''; width: 7px; height: 7px; border-radius: 50%; background: var(--accent); animation: pulse 2s infinite; }
+@keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.3;transform:scale(0.7)} }
+.hero h1 { font-family: 'Fraunces', serif; font-size: clamp(3rem, 5.5vw, 5rem); font-weight: 900; line-height: 1.0; letter-spacing: -2px; margin-bottom: 1.2rem; }
+.hero h1 .muted { color: var(--text3); }
+.hero h1 .red { color: var(--accent); }
+.hero-desc { font-size: 0.95rem; color: var(--text2); line-height: 1.75; max-width: 460px; margin-bottom: 2rem; font-weight: 300; }
+.hero-btns { display: flex; gap: 1rem; }
+.btn-primary { display: inline-flex; align-items: center; gap: 8px; background: var(--accent); color: #fff; font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: 0.82rem; padding: 0.8rem 1.6rem; border-radius: 6px; text-decoration: none; transition: all 0.2s; }
+.btn-primary:hover { background: #ff6b6b; transform: translateY(-2px); }
+.btn-ghost { display: inline-flex; align-items: center; gap: 8px; background: transparent; color: var(--text); font-weight: 500; font-size: 0.82rem; padding: 0.8rem 1.6rem; border-radius: 6px; border: 1px solid var(--border); text-decoration: none; transition: all 0.2s; }
+.btn-ghost:hover { border-color: rgba(100,140,200,0.3); background: var(--card); }
+.hero-photo-wrap { position: relative; z-index: 1; display: flex; justify-content: center; }
+.photo-container { position: relative; width: 280px; }
+.photo-decoration { position: absolute; top: -12px; right: -12px; width: 100%; height: 100%; border: 2px solid var(--accent); border-radius: 16px; z-index: 0; opacity: 0.35; }
+.photo-decoration2 { position: absolute; top: -24px; right: -24px; width: 100%; height: 100%; border: 1px solid rgba(255,77,77,0.12); border-radius: 16px; z-index: 0; }
+.photo-main { position: relative; z-index: 1; width: 280px; height: 340px; border-radius: 14px; overflow: hidden; border: 1px solid var(--border); }
+.photo-main img { width: 100%; height: 100%; object-fit: cover; object-position: center 20%; display: block; }
+.photo-badge { position: absolute; bottom: -20px; left: -20px; z-index: 2; background: var(--bg3); border: 1px solid var(--border); border-radius: 10px; padding: 12px 18px; }
+.photo-badge-num { font-family: 'Fraunces', serif; font-size: 1.6rem; font-weight: 900; color: var(--accent); line-height: 1; }
+.photo-badge-label { font-size: 0.68rem; color: var(--text2); margin-top: 2px; }
+.hero-socials { position: absolute; right: -55px; top: 50%; transform: translateY(-50%); display: flex; flex-direction: column; gap: 10px; z-index: 2; }
+.social-pill { width: 38px; height: 38px; border-radius: 8px; background: var(--bg3); border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; text-decoration: none; color: var(--text2); font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; font-weight: 500; transition: all 0.2s; }
+.social-pill:hover { border-color: var(--accent); color: var(--accent); }
+section { padding: 6rem 5rem; position: relative; z-index: 1; }
+.section-eyebrow { font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; letter-spacing: 2px; color: var(--accent); text-transform: uppercase; margin-bottom: 0.6rem; }
+.section-eyebrow::before { content: '// '; opacity: 0.5; }
+.section-title { font-family: 'Fraunces', serif; font-size: clamp(1.8rem, 3vw, 2.6rem); font-weight: 900; letter-spacing: -1px; margin-bottom: 3rem; line-height: 1.1; }
+.section-title .dim { color: var(--text3); }
+.about-strip {
+  background: var(--bg2); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+  padding: 3rem 5rem; display: flex; gap: 3rem; align-items: center; flex-wrap: wrap; position: relative; z-index: 1;
+}
+.stat-item { text-align: center; min-width: 90px; }
+.stat-num { font-family: 'Fraunces', serif; font-size: 2.2rem; font-weight: 900; color: var(--accent); line-height: 1; }
+.stat-label { font-size: 0.7rem; color: var(--text2); margin-top: 4px; }
+.stat-divider { width: 1px; height: 50px; background: var(--border); }
+.about-text { flex: 1; min-width: 280px; font-size: 0.88rem; color: var(--text2); line-height: 1.75; font-weight: 300; }
+.skills-bg { background: var(--bg2); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+.skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1px; border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
+.skill-card { background: var(--bg3); padding: 1.5rem; transition: background 0.2s; }
+.skill-card:hover { background: var(--bg4); }
+.skill-card-header { display: flex; align-items: center; gap: 10px; margin-bottom: 1rem; }
+.skill-card-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--accent); flex-shrink: 0; }
+.skill-card-title { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; font-weight: 500; letter-spacing: 1px; color: var(--text); text-transform: uppercase; }
+.skill-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.skill-tag { background: rgba(30,58,95,0.5); border: 1px solid var(--border); border-radius: 4px; padding: 3px 10px; font-size: 0.7rem; color: var(--text2); font-family: 'JetBrains Mono', monospace; }
+.project-featured { background: var(--bg2); border: 1px solid var(--border); border-radius: 16px; overflow: hidden; margin-bottom: 1.5rem; transition: border-color 0.2s; }
+.project-featured:hover { border-color: rgba(255,77,77,0.2); }
+.scas-gallery { display: grid; grid-template-columns: 1.8fr 1fr; height: 280px; }
+.scas-gallery-main { overflow: hidden; background: var(--bg3); }
+.scas-gallery-main img { width: 100%; height: 100%; object-fit: cover; object-position: 35% center; display: block; }
+.scas-gallery-col { display: grid; grid-template-rows: 1fr 1fr; gap: 2px; background: var(--bg); }
+.scas-gallery-col div { overflow: hidden; background: var(--bg3); }
+.scas-gallery-col div img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.scas-gallery-col div:first-child img { object-position: center 35%; }
+.scas-gallery-col div:last-child img { object-position: center 30%; }
+.project-body { padding: 1.75rem; }
+.project-badges { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 0.75rem; }
+.badge { font-family: 'JetBrains Mono', monospace; font-size: 0.63rem; letter-spacing: 0.5px; padding: 3px 10px; border-radius: 4px; }
+.badge-red { background: rgba(255,77,77,0.1); color: var(--accent); border: 1px solid rgba(255,77,77,0.25); }
+.badge-navy { background: rgba(30,58,95,0.5); color: #7ab3ff; border: 1px solid rgba(100,150,255,0.2); }
+.badge-amber { background: rgba(255,209,102,0.1); color: var(--accent3); border: 1px solid rgba(255,209,102,0.2); }
+.badge-green { background: rgba(0,230,118,0.08); color: #00e676; border: 1px solid rgba(0,230,118,0.2); }
+.project-title { font-family: 'Fraunces', serif; font-size: 1.15rem; font-weight: 700; margin-bottom: 0.5rem; line-height: 1.3; }
+.project-desc { font-size: 0.83rem; color: var(--text2); line-height: 1.7; margin-bottom: 1rem; font-weight: 300; }
+.project-tools { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 1.25rem; }
+.tool-tag { font-family: 'JetBrains Mono', monospace; font-size: 0.65rem; color: var(--text3); background: rgba(30,58,95,0.3); border: 1px solid var(--border); padding: 3px 8px; border-radius: 3px; }
+.project-link { display: inline-flex; align-items: center; gap: 6px; font-size: 0.78rem; font-weight: 600; text-decoration: none; padding: 7px 16px; border-radius: 6px; transition: all 0.2s; margin-right: 8px; }
+.project-link.red { background: rgba(255,77,77,0.1); color: var(--accent); border: 1px solid rgba(255,77,77,0.25); }
+.project-link.red:hover { background: rgba(255,77,77,0.2); }
+.project-link.ghost { color: var(--text2); border: 1px solid var(--border); }
+.project-link.ghost:hover { border-color: rgba(100,140,200,0.3); color: var(--text); }
+.projects-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+.project-card { background: var(--bg2); border: 1px solid var(--border); border-radius: 14px; overflow: hidden; transition: transform 0.2s, border-color 0.2s; }
+.project-card:hover { transform: translateY(-3px); border-color: rgba(255,77,77,0.15); }
+.project-card-placeholder { height: 150px; background: var(--bg3); display: flex; align-items: center; justify-content: center; font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; color: var(--text3); letter-spacing: 1px; border-bottom: 1px solid var(--border); }
+.project-card-body { padding: 1.25rem; }
+.timeline-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0 4rem; }
+.timeline { position: relative; padding-left: 1.5rem; }
+.timeline::before { content: ''; position: absolute; left: 0; top: 8px; bottom: 0; width: 1px; background: linear-gradient(to bottom, var(--accent), rgba(255,77,77,0.05)); }
+.tl-item { position: relative; margin-bottom: 2.5rem; }
+.tl-item::before { content: ''; position: absolute; left: -1.9rem; top: 7px; width: 7px; height: 7px; border-radius: 50%; background: var(--accent); border: 2px solid var(--bg2); box-shadow: 0 0 0 3px rgba(255,77,77,0.15); }
+.tl-date { font-family: 'JetBrains Mono', monospace; font-size: 0.65rem; color: var(--accent); letter-spacing: 1px; margin-bottom: 4px; }
+.tl-title { font-weight: 600; font-size: 0.9rem; margin-bottom: 2px; line-height: 1.3; }
+.tl-sub { font-size: 0.75rem; color: var(--text2); margin-bottom: 8px; }
+.tl-points { list-style: none; }
+.tl-points li { font-size: 0.78rem; color: var(--text2); padding: 2px 0 2px 1rem; position: relative; line-height: 1.5; font-weight: 300; }
+.tl-points li::before { content: '›'; position: absolute; left: 0; color: var(--accent2); }
+.certs-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 1rem; }
+.cert-card { background: var(--bg2); border: 1px solid var(--border); border-radius: 10px; padding: 1.25rem 1.5rem; display: flex; align-items: flex-start; gap: 12px; transition: border-color 0.2s; }
+.cert-card:hover { border-color: rgba(255,77,77,0.2); }
+.cert-num { font-family: 'JetBrains Mono', monospace; font-size: 1rem; font-weight: 500; color: var(--accent); opacity: 0.45; min-width: 24px; }
+.cert-name { font-size: 0.82rem; font-weight: 600; line-height: 1.4; margin-bottom: 3px; }
+.cert-org { font-size: 0.7rem; color: var(--text2); }
+.contact-wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start; }
+.contact-intro { font-size: 0.9rem; color: var(--text2); line-height: 1.75; margin-bottom: 2rem; font-weight: 300; }
+.contact-items { display: flex; flex-direction: column; gap: 0.75rem; }
+.contact-item { display: flex; align-items: center; gap: 14px; padding: 1rem 1.25rem; background: var(--bg3); border: 1px solid var(--border); border-radius: 10px; text-decoration: none; transition: all 0.2s; }
+.contact-item:hover { border-color: rgba(255,77,77,0.25); background: var(--bg4); }
+.contact-icon { width: 36px; height: 36px; border-radius: 8px; background: rgba(255,77,77,0.1); border: 1px solid rgba(255,77,77,0.2); display: flex; align-items: center; justify-content: center; font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; color: var(--accent); flex-shrink: 0; font-weight: 500; }
+.contact-info { display: flex; flex-direction: column; }
+.contact-label { font-size: 0.65rem; color: var(--text3); letter-spacing: 1px; text-transform: uppercase; margin-bottom: 2px; }
+.contact-val { font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; color: var(--text); }
+footer { padding: 2rem 5rem; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; position: relative; z-index: 1; }
+.footer-left { font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; color: var(--text3); }
+.footer-right { font-size: 0.72rem; color: var(--text3); }
+@keyframes fadeUp { from{opacity:0;transform:translateY(20px)} to{opacity:1;transform:translateY(0)} }
+.hero-content > * { animation: fadeUp 0.5s ease forwards; opacity: 0; }
+.hero-content > *:nth-child(1){animation-delay:0.1s}
+.hero-content > *:nth-child(2){animation-delay:0.2s}
+.hero-content > *:nth-child(3){animation-delay:0.3s}
+.hero-content > *:nth-child(4){animation-delay:0.4s}
+.hero-photo-wrap { animation: fadeUp 0.5s 0.25s ease forwards; opacity: 0; }
+</style>
 </head>
 <body>
 
-    <nav>
-        <div style="font-weight: bold; color: var(--accent);">[GIRI.EXE]</div>
-        <a href="mailto:giridharsridharan11@gmail.com" class="btn">CONTACT_ME</a>
-    </nav>
+<nav>
+  <div class="nav-logo">GS<span>.</span></div>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
 
-    <section class="hero">
-        <div class="hero-text">
-            <p style="color: var(--accent); letter-spacing: 3px;">SYSTEM.INITIALIZE...</p>
-            <h1>GIRIDHAR <br><span>SRIDHARAN</span></h1>
-            <p style="color: var(--text-dim); max-width: 500px;">VLSI Physical Design & Embedded Systems Engineer. Specializing in GDSII automation and hardware security.</p>
-        </div>
-        <div class="profile-container">
-            <img src="coart_photo.png" alt="Giridhar S">
-        </div>
-    </section>
-
-    <h2 class="section-title">HARDWARE_REPOS</h2>
-
-    <div class="gallery-grid">
-        <div class="gallery-card">
-            <div class="img-box">
-                <img src="WhatsApp Image 2026-05-01 at 7.14.00 PM.jpeg" alt="SCAS Testing">
-            </div>
-            <div class="card-content">
-                <h3>SCAS Prototype</h3>
-                <p style="color: var(--text-dim); font-size: 0.9rem;">Real-time blind curve alert system. Hardware testing phase.</p>
-                <div class="tag">Arduino</div><div class="tag">HC-12</div><div class="tag">Sensors</div>
-            </div>
-        </div>
-
-        <div class="gallery-card">
-            <div class="img-box">
-                <img src="WhatsApp Image 2026-05-01 at 7.14.01 PM.jpeg" alt="Hackathon Frame">
-            </div>
-            <div class="card-content">
-                <h3>TN-IMPACK 2026</h3>
-                <p style="color: var(--text-dim); font-size: 0.9rem;">Showcasing our project at the state-level hackathon.</p>
-                <div class="tag">Government</div><div class="tag">TANCAME</div>
-            </div>
-        </div>
-
-        <div class="gallery-card">
-            <div class="img-box">
-                <img src="WhatsApp Image 2026-05-01 at 7.14.02 PM.jpeg" alt="Development">
-            </div>
-            <div class="card-content">
-                <h3>System Architecture</h3>
-                <p style="color: var(--text-dim); font-size: 0.9rem;">Visualizing the logic flow and IDE implementation.</p>
-                <div class="tag">Logic</div><div class="tag">Embedded C</div>
-            </div>
-        </div>
+<section class="hero" id="about">
+  <div class="hero-glow"></div>
+  <div class="hero-content">
+    <div class="hero-tag">Available for Internship & Full-time Roles</div>
+    <h1>Giridhar S<br><span class="muted">VLSI &</span><br><span class="red">Embedded</span></h1>
+    <p class="hero-desc">Final-year Electronics Engineering student at S.A. Engineering College, Chennai — specialising in VLSI Physical Design and Embedded Systems. Building real hardware and real tools.</p>
+    <div class="hero-btns">
+      <a href="mailto:giridharsridharan11@gmail.com" class="btn-primary">Get in Touch</a>
+      <a href="#projects" class="btn-ghost">View Projects</a>
     </div>
+  </div>
+  <div class="hero-photo-wrap">
+    <div class="photo-container">
+      <div class="photo-decoration"></div>
+      <div class="photo-decoration2"></div>
+      <div class="photo-main">
+        <img src="coart_photo.png" alt="Giridhar S">
+      </div>
+      <div class="photo-badge">
+        <div class="photo-badge-num">3</div>
+        <div class="photo-badge-label">Projects Built</div>
+      </div>
+    </div>
+    <div class="hero-socials">
+      <a href="https://www.linkedin.com/in/giridhar-s-6a0010373" class="social-pill" target="_blank">in</a>
+      <a href="https://github.com/GIRIDHAR-VLSI-Engineer" class="social-pill" target="_blank">gh</a>
+      <a href="mailto:giridharsridharan11@gmail.com" class="social-pill">@</a>
+    </div>
+  </div>
+</section>
 
-    <footer style="text-align: center; padding: 4rem; color: var(--text-dim); font-family: 'JetBrains Mono'; font-size: 0.8rem; border-top: 1px solid var(--border);">
-        // TERMINAL ENDS | DESIGNED FOR GIRIDHAR S //
-    </footer>
+<div class="about-strip">
+  <div class="stat-item"><div class="stat-num">3</div><div class="stat-label">Projects Built</div></div>
+  <div class="stat-divider"></div>
+  <div class="stat-item"><div class="stat-num">5+</div><div class="stat-label">Internships</div></div>
+  <div class="stat-divider"></div>
+  <div class="stat-item"><div class="stat-num">4</div><div class="stat-label">Certifications</div></div>
+  <div class="stat-divider"></div>
+  <div class="stat-item"><div class="stat-num">2027</div><div class="stat-label">Graduating</div></div>
+  <div class="stat-divider"></div>
+  <p class="about-text">Hands-on engineer with real industry tools — Cadence Virtuoso, KLayout, Arduino, ESP32. Built a working hardware prototype that competed at a state-level Govt. of Tamil Nadu hackathon. Currently building an anti-deepfake audio authentication system combining embedded hardware with machine learning.</p>
+</div>
+
+<section class="skills-bg" id="skills">
+  <div class="section-eyebrow">expertise</div>
+  <div class="section-title">Technical <span class="dim">Skills</span></div>
+  <div class="skills-grid">
+    <div class="skill-card">
+      <div class="skill-card-header"><div class="skill-card-dot"></div><div class="skill-card-title">EDA Tools</div></div>
+      <div class="skill-tags"><span class="skill-tag">KLayout 0.28</span><span class="skill-tag">Cadence Virtuoso 6.1.7</span><span class="skill-tag">Assura DRC</span><span class="skill-tag">Xilinx Vivado</span><span class="skill-tag">Proteus 8</span></div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-card-header"><div class="skill-card-dot"></div><div class="skill-card-title">VLSI / Physical Design</div></div>
+      <div class="skill-tags"><span class="skill-tag">GDSII Layout</span><span class="skill-tag">Physical Design</span><span class="skill-tag">DRC</span><span class="skill-tag">Dummy Cell Insertion</span><span class="skill-tag">IP Protection</span><span class="skill-tag">GPDK045 45nm</span></div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-card-header"><div class="skill-card-dot"></div><div class="skill-card-title">Languages</div></div>
+      <div class="skill-tags"><span class="skill-tag">Python (Advanced)</span><span class="skill-tag">Verilog HDL</span><span class="skill-tag">C++</span></div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-card-header"><div class="skill-card-dot"></div><div class="skill-card-title">Embedded Systems</div></div>
+      <div class="skill-tags"><span class="skill-tag">Arduino Uno R3</span><span class="skill-tag">Arduino Nano</span><span class="skill-tag">ESP32</span><span class="skill-tag">HC-12 Wireless</span><span class="skill-tag">Ultrasonic Sensors</span><span class="skill-tag">LCD / Servo / Stepper</span><span class="skill-tag">INMP441 I2S Mic</span></div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-card-header"><div class="skill-card-dot"></div><div class="skill-card-title">Libraries & Frameworks</div></div>
+      <div class="skill-tags"><span class="skill-tag">gdspy</span><span class="skill-tag">pya (KLayout API)</span><span class="skill-tag">Streamlit</span><span class="skill-tag">scikit-learn</span><span class="skill-tag">librosa</span><span class="skill-tag">Flask</span><span class="skill-tag">NumPy / Pandas</span></div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-card-header"><div class="skill-card-dot"></div><div class="skill-card-title">Security & OS</div></div>
+      <div class="skill-tags"><span class="skill-tag">SHA-256</span><span class="skill-tag">Digital Watermarking</span><span class="skill-tag">Cryptographic Hashing</span><span class="skill-tag">Ubuntu 24.04 LTS</span><span class="skill-tag">Red Hat Linux</span><span class="skill-tag">VMware</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="section-eyebrow">what i've built</div>
+  <div class="section-title">Projects</div>
+  <div class="project-featured">
+    <div class="scas-gallery">
+      <div class="scas-gallery-main">
+        <img src="WhatsApp Image 2026-05-01 at 7.14.00 PM.jpeg" alt="Working on SCAS prototype">
+      </div>
+      <div class="scas-gallery-col">
+        <div><img src="WhatsApp Image 2026-05-01 at 7.14.02 PM.jpeg" alt="Arduino IDE and hardware"></div>
+        <div><img src="WhatsApp Image 2026-05-01 at 7.14.01 PM.jpeg" alt="TN-IMPACT 2026"></div>
+      </div>
+    </div>
+    <div class="project-body">
+      <div class="project-badges">
+        <span class="badge badge-red">Completed</span>
+        <span class="badge badge-amber">State-Level Hackathon</span>
+        <span class="badge badge-green">Physical Prototype</span>
+      </div>
+      <div class="project-title">Smart Curve Alert System (SCAS)</div>
+      <p class="project-desc">Two-module embedded hardware system detecting vehicles at blind curves and delivering real-time alerts. Solar-powered roadside transmitter communicates wirelessly to in-vehicle receiver with LCD and voice output. Working prototype presented at TN-IMPACK 2026, TANCAME, Govt. of Tamil Nadu.</p>
+      <div class="project-tools">
+        <span class="tool-tag">Arduino Uno</span><span class="tool-tag">HC-12 Wireless</span><span class="tool-tag">Ultrasonic Sensors</span><span class="tool-tag">LCD Display</span><span class="tool-tag">Voice Module</span><span class="tool-tag">Solar Power</span><span class="tool-tag">C++</span>
+      </div>
+      <a href="https://github.com/GIRIDHAR-VLSI-Engineer" class="project-link red" target="_blank">GitHub →</a>
+    </div>
+  </div>
+  <div class="projects-grid">
+    <div class="project-card">
+      <div class="project-card-placeholder">[ VLSI / PHYSICAL DESIGN ]</div>
+      <div class="project-card-body">
+        <div class="project-badges" style="margin-bottom:0.6rem;"><span class="badge badge-navy">Ongoing</span><span class="badge badge-red">VLSI</span></div>
+        <div class="project-title" style="font-size:0.95rem;margin-bottom:0.5rem;">Layout-Level Dummy Cell Watermarking</div>
+        <p class="project-desc">Automated VLSI IP-protection tool embedding owner identity in GDSII layouts via BASE64 + SHA-256. Zero DRC violations verified on Cadence Virtuoso + GPDK045 45nm. Streamlit web app for attack simulation.</p>
+        <div class="project-tools"><span class="tool-tag">Python</span><span class="tool-tag">KLayout pya</span><span class="tool-tag">Cadence Virtuoso</span><span class="tool-tag">Streamlit</span><span class="tool-tag">SHA-256</span></div>
+        <a href="https://github.com/GIRIDHAR-VLSI-Engineer" class="project-link red" target="_blank">GitHub →</a>
+      </div>
+    </div>
+    <div class="project-card">
+      <div class="project-card-placeholder">[ HARDWARE + ML ]</div>
+      <div class="project-card-body">
+        <div class="project-badges" style="margin-bottom:0.6rem;"><span class="badge badge-amber">In Progress</span><span class="badge badge-green">Embedded + ML</span></div>
+        <div class="project-title" style="font-size:0.95rem;margin-bottom:0.5rem;">Anti-Deepfake Audio Authentication</div>
+        <p class="project-desc">ESP32 + I2S mic embeds inaudible ultrasonic watermarks at recording. Flask backend with cryptographic signing + scikit-learn/librosa ML model for AI voice detection. React frontend for real-time verification.</p>
+        <div class="project-tools"><span class="tool-tag">ESP32</span><span class="tool-tag">Flask</span><span class="tool-tag">scikit-learn</span><span class="tool-tag">librosa</span><span class="tool-tag">React</span></div>
+        <a href="https://github.com/GIRIDHAR-VLSI-Engineer" class="project-link ghost">Coming Soon</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);" id="experience">
+  <div class="section-eyebrow">journey</div>
+  <div class="section-title">Experience & <span class="dim">Training</span></div>
+  <div class="timeline-grid">
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-date">2023 – 2027 (Expected)</div>
+        <div class="tl-title">B.E. Electronics Engineering</div>
+        <div class="tl-sub">S.A. Engineering College, Chennai · VLSI Design & Technology · CGPA: 6.87</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">2 Months</div>
+        <div class="tl-title">Intern — 4SG Technology</div>
+        <div class="tl-sub">Hardware Servicing · Canon, Brother, Epson</div>
+        <ul class="tl-points">
+          <li>Serviced 3–4 machines daily — fuser units, gear assemblies, toner mechanisms</li>
+          <li>Resolved faults on-site without escalation; awarded LOR for technical competence</li>
+        </ul>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">30 days + Ongoing</div>
+        <div class="tl-title">Associate — MaestroMinds</div>
+        <div class="tl-sub">Hardware Projects · Remote Collaboration (Zoho Cliq)</div>
+        <ul class="tl-points">
+          <li>Contributed to 2 real-time client hardware projects</li>
+          <li>Retained post-internship — assigned to projects with stipend on delivery</li>
+        </ul>
+      </div>
+    </div>
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-date">30 Days</div>
+        <div class="tl-title">Trainee — MSME-DFO Guindy, Govt. of India</div>
+        <div class="tl-sub">ESDP — IoT & Embedded Systems</div>
+        <ul class="tl-points">
+          <li>Arduino Uno R3, Nano, ESP32 — architecture and real-world use cases</li>
+          <li>Knowledge applied directly in SCAS hardware prototype</li>
+        </ul>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">30 Days</div>
+        <div class="tl-title">Inplant Trainee — Chennai Port Authority</div>
+        <div class="tl-sub">M&E Engineering · Electronics & Communication</div>
+        <ul class="tl-points">
+          <li>Trained across EDP, Electrical, Mechanical, Electronics divisions</li>
+          <li>Observed large-scale industrial communication systems in active port infrastructure</li>
+        </ul>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">Since 2023 · Part-time ongoing</div>
+        <div class="tl-title">Printing Technician — Printzo World</div>
+        <div class="tl-sub">Print Operations · Customer Handling</div>
+        <ul class="tl-points">
+          <li>Managed operations serving 150+ customers on peak days as sole operator</li>
+          <li>2+ years alongside full-time academics</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="certifications">
+  <div class="section-eyebrow">credentials</div>
+  <div class="section-title">Certifications & <span class="dim">Workshops</span></div>
+  <div class="certs-grid">
+    <div class="cert-card"><div class="cert-num">01</div><div><div class="cert-name">Python Masterclass</div><div class="cert-org">MRL Tech Solutions Pvt. Ltd.</div></div></div>
+    <div class="cert-card"><div class="cert-num">02</div><div><div class="cert-name">PCB Design (Hands-on)</div><div class="cert-org">Pantech eLearning Pvt. Ltd.</div></div></div>
+    <div class="cert-card"><div class="cert-num">03</div><div><div class="cert-name">Advanced Verilog HDL</div><div class="cert-org">Pantech eLearning Pvt. Ltd.</div></div></div>
+    <div class="cert-card"><div class="cert-num">04</div><div><div class="cert-name">VLSI Design Flow — RTL to GDS Workshop</div><div class="cert-org">ChipXpert Technologies Pvt. Ltd.</div></div></div>
+  </div>
+</section>
+
+<section style="background:var(--bg2);border-top:1px solid var(--border);" id="contact">
+  <div class="section-eyebrow">let's connect</div>
+  <div class="section-title">Get in <span class="dim">Touch</span></div>
+  <div class="contact-wrap">
+    <div>
+      <p class="contact-intro">Final-year student actively seeking internship or full-time roles in VLSI/RTL Design or Embedded Systems engineering. Based in Chennai — open to relocation across India.</p>
+      <a href="mailto:giridharsridharan11@gmail.com" class="btn-primary" style="display:inline-flex;">Send Email →</a>
+    </div>
+    <div class="contact-items">
+      <a href="mailto:giridharsridharan11@gmail.com" class="contact-item"><div class="contact-icon">@</div><div class="contact-info"><span class="contact-label">Email</span><span class="contact-val">giridharsridharan11@gmail.com</span></div></a>
+      <a href="https://www.linkedin.com/in/giridhar-s-6a0010373" class="contact-item" target="_blank"><div class="contact-icon">in</div><div class="contact-info"><span class="contact-label">LinkedIn</span><span class="contact-val">Giridhar S</span></div></a>
+      <a href="https://github.com/GIRIDHAR-VLSI-Engineer" class="contact-item" target="_blank"><div class="contact-icon">gh</div><div class="contact-info"><span class="contact-label">GitHub</span><span class="contact-val">GIRIDHAR-VLSI-Engineer</span></div></a>
+      <a href="https://wa.me/9150310513" class="contact-item" target="_blank"><div class="contact-icon">+</div><div class="contact-info"><span class="contact-label">Phone / WhatsApp</span><span class="contact-val">(+91) 915-031-0513</span></div></a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-left">giridhar-vlsi-engineer.github.io</div>
+  <div class="footer-right">Chennai, India · 2026</div>
+</footer>
 
 </body>
 </html>
