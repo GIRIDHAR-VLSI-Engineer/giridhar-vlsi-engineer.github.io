@@ -8,15 +8,15 @@
 <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Syne:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
 :root {
-  --bg: #0a0a0f;
-  --bg2: #111118;
-  --bg3: #1a1a24;
-  --accent: #00e5ff;
-  --accent2: #7c4dff;
-  --accent3: #00ff94;
-  --text: #e8e8f0;
-  --text2: #8888aa;
-  --text3: #555570;
+  --bg: #0d0d0d;
+  --bg2: #141414;
+  --bg3: #1e1e1e;
+  --accent: #ff6b00;
+  --accent2: #ff9a3c;
+  --accent3: #ffe066;
+  --text: #f0ece4;
+  --text2: #998f80;
+  --text3: #554d40;
   --border: rgba(255,255,255,0.07);
   --card: rgba(255,255,255,0.03);
 }
@@ -86,8 +86,8 @@ nav {
   position: absolute;
   inset: 0;
   background-image:
-    linear-gradient(rgba(0,229,255,0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0,229,255,0.03) 1px, transparent 1px);
+    linear-gradient(rgba(255,107,0,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,107,0,0.03) 1px, transparent 1px);
   background-size: 60px 60px;
   mask-image: radial-gradient(ellipse at 60% 50%, black 30%, transparent 75%);
 }
@@ -95,7 +95,7 @@ nav {
   position: absolute;
   width: 600px; height: 600px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(124,77,255,0.12) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(255,154,60,0.12) 0%, transparent 70%);
   right: -100px; top: 50%;
   transform: translateY(-50%);
   pointer-events: none;
@@ -105,8 +105,8 @@ nav {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: rgba(0,229,255,0.08);
-  border: 1px solid rgba(0,229,255,0.2);
+  background: rgba(255,107,0,0.08);
+  border: 1px solid rgba(255,107,0,0.2);
   border-radius: 100px;
   padding: 6px 16px;
   font-family: 'DM Mono', monospace;
@@ -146,7 +146,7 @@ nav {
   align-items: center;
   gap: 8px;
   background: var(--accent);
-  color: #000;
+  color: #0d0d0d;
   font-weight: 500;
   font-size: 0.85rem;
   padding: 0.75rem 1.5rem;
@@ -190,7 +190,7 @@ nav {
   position: absolute;
   inset: -2px;
   border-radius: 20px;
-  background: linear-gradient(135deg, var(--accent), var(--accent2), var(--accent3));
+  background: linear-gradient(135deg, #ff6b00, #ff9a3c, #ffe066);
   z-index: -1;
 }
 .hero-photo-frame img {
@@ -277,7 +277,7 @@ section { padding: 6rem 4rem; position: relative; }
   padding: 1.5rem;
   transition: border-color 0.2s;
 }
-.skill-card:hover { border-color: rgba(0,229,255,0.2); }
+.skill-card:hover { border-color: rgba(255,107,0,0.2); }
 .skill-card-icon {
   font-size: 1.5rem;
   margin-bottom: 0.75rem;
@@ -315,7 +315,7 @@ section { padding: 6rem 4rem; position: relative; }
   overflow: hidden;
   transition: transform 0.2s, border-color 0.2s;
 }
-.project-card:hover { transform: translateY(-4px); border-color: rgba(0,229,255,0.15); }
+.project-card:hover { transform: translateY(-4px); border-color: rgba(255,107,0,0.15); }
 .project-img {
   width: 100%;
   height: 200px;
@@ -326,7 +326,7 @@ section { padding: 6rem 4rem; position: relative; }
 .project-img-placeholder {
   width: 100%;
   height: 200px;
-  background: linear-gradient(135deg, var(--bg3), rgba(124,77,255,0.1));
+  background: linear-gradient(135deg, var(--bg3), rgba(255,154,60,0.1));
   display: flex;
   align-items: center;
   justify-content: center;
@@ -341,9 +341,9 @@ section { padding: 6rem 4rem; position: relative; }
   padding: 3px 10px;
   border-radius: 100px;
 }
-.badge-cyan { background: rgba(0,229,255,0.1); color: var(--accent); border: 1px solid rgba(0,229,255,0.2); }
-.badge-purple { background: rgba(124,77,255,0.1); color: #a78bff; border: 1px solid rgba(124,77,255,0.2); }
-.badge-green { background: rgba(0,255,148,0.1); color: var(--accent3); border: 1px solid rgba(0,255,148,0.2); }
+.badge-cyan { background: rgba(255,107,0,0.1); color: var(--accent); border: 1px solid rgba(255,107,0,0.2); }
+.badge-purple { background: rgba(255,154,60,0.1); color: #ffb347; border: 1px solid rgba(255,154,60,0.2); }
+.badge-green { background: rgba(255,224,102,0.1); color: var(--accent3); border: 1px solid rgba(255,224,102,0.2); }
 .badge-amber { background: rgba(255,180,0,0.1); color: #ffb400; border: 1px solid rgba(255,180,0,0.2); }
 .project-title {
   font-family: 'Syne', sans-serif;
@@ -377,8 +377,8 @@ section { padding: 6rem 4rem; position: relative; }
   border-radius: 6px;
   transition: all 0.2s;
 }
-.project-link.primary { background: rgba(0,229,255,0.1); color: var(--accent); border: 1px solid rgba(0,229,255,0.2); }
-.project-link.primary:hover { background: rgba(0,229,255,0.2); }
+.project-link.primary { background: rgba(255,107,0,0.1); color: var(--accent); border: 1px solid rgba(255,107,0,0.2); }
+.project-link.primary:hover { background: rgba(255,107,0,0.2); }
 .project-link.ghost { color: var(--text2); border: 1px solid var(--border); }
 .project-link.ghost:hover { border-color: rgba(255,255,255,0.2); color: var(--text); }
 
@@ -422,7 +422,7 @@ section { padding: 6rem 4rem; position: relative; }
   border-radius: 50%;
   background: var(--accent);
   border: 2px solid var(--bg);
-  box-shadow: 0 0 0 3px rgba(0,229,255,0.15);
+  box-shadow: 0 0 0 3px rgba(255,107,0,0.15);
 }
 .timeline-date {
   font-family: 'DM Mono', monospace;
@@ -471,7 +471,7 @@ section { padding: 6rem 4rem; position: relative; }
   padding: 1.25rem;
   transition: border-color 0.2s;
 }
-.cert-card:hover { border-color: rgba(0,229,255,0.2); }
+.cert-card:hover { border-color: rgba(255,107,0,0.2); }
 .cert-icon { font-size: 1.5rem; margin-bottom: 0.5rem; }
 .cert-name {
   font-size: 0.82rem;
@@ -508,11 +508,11 @@ section { padding: 6rem 4rem; position: relative; }
   border-radius: 10px;
   transition: all 0.2s;
 }
-.contact-link:hover { border-color: rgba(0,229,255,0.2); background: var(--card); }
+.contact-link:hover { border-color: rgba(255,107,0,0.2); background: var(--card); }
 .contact-link-icon {
   width: 36px; height: 36px;
   border-radius: 8px;
-  background: rgba(0,229,255,0.08);
+  background: rgba(255,107,0,0.08);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -605,7 +605,7 @@ footer {
 
   <div class="hero-photo-wrap">
     <div class="hero-photo-frame">
-      <img src="images/profile.png" alt="Giridhar S" onerror="this.style.background='#1a1a24';this.style.display='flex';this.alt='GS'">
+      <img src="coart_photo.png" alt="Giridhar S" onerror="this.style.background='#1a1a24';this.style.display='flex';this.alt='GS'">
       <div class="hero-photo-badge">
         <div class="badge-num">3</div>
         <div class="badge-label">Projects Built</div>
@@ -707,14 +707,14 @@ footer {
     <!-- SCAS -->
     <div class="project-card" style="grid-column: 1 / -1;">
       <div class="scas-gallery">
-        <img src="images/scas_demo.jpeg" alt="SCAS prototype working" onerror="this.src='';this.style.background='#1a1a24'">
+        <img src="WhatsApp Image 2026-05-01 at 7.14.00 PM.jpeg" alt="SCAS prototype working" onerror="this.style.background='#1e1e1e'">
         <div class="scas-gallery-col">
-          <img src="images/scas_code.jpeg" alt="Arduino code" onerror="this.src='';this.style.background='#111118'">
-          <img src="images/scas_hackathon.jpeg" alt="TN-IMPACT hackathon" onerror="this.src='';this.style.background='#111118'">
+          <img src="WhatsApp Image 2026-05-01 at 7.14.04 PM.jpeg" alt="Arduino code" onerror="this.style.background='#141414'">
+          <img src="WhatsApp Image 2026-05-01 at 7.14.01 PM.jpeg" alt="TN-IMPACT hackathon" onerror="this.style.background='#141414'">
         </div>
         <div class="scas-gallery-col">
-          <img src="images/scas_team.jpeg" alt="Team ASTRIX" onerror="this.src='';this.style.background='#1a1a24'">
-          <img src="images/scas_circuit.jpeg" alt="Circuit closeup" onerror="this.src='';this.style.background='#111118'">
+          <img src="WhatsApp Image 2026-05-01 at 7.14.03 PM (1).jpeg" alt="Team ASTRIX" onerror="this.style.background='#1e1e1e'">
+          <img src="WhatsApp Image 2026-05-01 at 7.14.03 PM.jpeg" alt="Circuit closeup" onerror="this.style.background='#141414'">
         </div>
       </div>
       <div class="project-body">
