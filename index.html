@@ -197,6 +197,7 @@ nav {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center top;
   border-radius: 18px;
   display: block;
 }
@@ -320,6 +321,7 @@ section { padding: 6rem 4rem; position: relative; }
   width: 100%;
   height: 200px;
   object-fit: cover;
+  object-position: center top;
   display: block;
   background: var(--bg3);
 }
@@ -385,16 +387,17 @@ section { padding: 6rem 4rem; position: relative; }
 /* SCAS GALLERY */
 .scas-gallery {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   gap: 8px;
   border-radius: 12px;
   overflow: hidden;
-  height: 220px;
+  height: 260px;
 }
 .scas-gallery img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center top;
   display: block;
 }
 .scas-gallery-col { display: flex; flex-direction: column; gap: 8px; }
@@ -707,14 +710,10 @@ footer {
     <!-- SCAS -->
     <div class="project-card" style="grid-column: 1 / -1;">
       <div class="scas-gallery">
-        <img src="WhatsApp Image 2026-05-01 at 7.14.00 PM.jpeg" alt="SCAS prototype working" onerror="this.style.background='#1e1e1e'">
+        <img src="WhatsApp Image 2026-05-01 at 7.14.03 PM.jpeg" alt="SCAS circuit closeup" style="object-position: center center;" onerror="this.style.background='#1e1e1e'">
         <div class="scas-gallery-col">
-          <img src="WhatsApp Image 2026-05-01 at 7.14.04 PM.jpeg" alt="Arduino code" onerror="this.style.background='#141414'">
-          <img src="WhatsApp Image 2026-05-01 at 7.14.01 PM.jpeg" alt="TN-IMPACT hackathon" onerror="this.style.background='#141414'">
-        </div>
-        <div class="scas-gallery-col">
-          <img src="WhatsApp Image 2026-05-01 at 7.14.03 PM (1).jpeg" alt="Team ASTRIX" onerror="this.style.background='#1e1e1e'">
-          <img src="WhatsApp Image 2026-05-01 at 7.14.03 PM.jpeg" alt="Circuit closeup" onerror="this.style.background='#141414'">
+          <img src="WhatsApp Image 2026-05-01 at 7.14.02 PM.jpeg" alt="Arduino IDE and hardware" onerror="this.style.background='#141414'">
+          <img src="WhatsApp Image 2026-05-01 at 7.14.03 PM (1).jpeg" alt="Team at TN-IMPACT 2026" onerror="this.style.background='#141414'">
         </div>
       </div>
       <div class="project-body">
