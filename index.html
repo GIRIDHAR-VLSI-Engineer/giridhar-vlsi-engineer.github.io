@@ -80,8 +80,8 @@ section{padding:5rem 3rem;position:relative;z-index:1;}
 /* PHOTO ROW — fixed height, photos sit inside */
 .scas-photos{
   display:grid;
-  grid-template-columns:1.8fr 1fr;
-  height:280px;           /* fixed height — photos never escape this */
+  grid-template-columns:1fr 1fr 1fr;
+  height:360px;           /* fixed height — photos never escape this */
   gap:3px;
   background:var(--bg);
   overflow:hidden;        /* clips anything trying to spill out */
@@ -93,7 +93,7 @@ section{padding:5rem 3rem;position:relative;z-index:1;}
   object-position:30% center;
   display:block;
 }
-.scas-side-photos{display:grid;grid-template-rows:1fr 1fr;gap:3px;}
+.scas-side-photos{display:contents;}
 .scas-side-box{overflow:hidden;}
 .scas-side-box img{width:100%;height:100%;object-fit:cover;display:block;}
 /* TEXT BOX — sits below photo row, completely separate */
