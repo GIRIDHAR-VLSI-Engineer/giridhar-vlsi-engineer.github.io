@@ -1,6 +1,3 @@
-
-
-Portfolio silicon full · HTML
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,7 +19,7 @@ Portfolio silicon full · HTML
   a { color:inherit; text-decoration:none; }
   .sans { font-family:'Inter',sans-serif; }
   ::selection { background:#4a9eff; color:#0a0d12; }
- 
+
   nav {
     position:sticky; top:0; z-index:50; background:rgba(10,13,18,0.94); backdrop-filter:blur(6px);
     border-bottom:1px solid #1f2530; padding:12px 18px; display:flex; justify-content:space-between;
@@ -32,7 +29,7 @@ Portfolio silicon full · HTML
   .nav-logo span { color:#4a9eff; }
   .nav-links { display:flex; gap:16px; flex-wrap:wrap; color:#6b7280; }
   .nav-links a:hover, .nav-links a:focus-visible { color:#4a9eff; }
- 
+
   .legend {
     display:flex; gap:14px; flex-wrap:wrap; padding:9px 18px; border-bottom:1px solid #1f2530;
     font-size:9px; color:#9aa4b2; background:#0d1117;
@@ -41,12 +38,12 @@ Portfolio silicon full · HTML
   .swatch { width:8px; height:8px; display:inline-block; flex-shrink:0; }
   .sw-m1 { background:#4a9eff; } .sw-m2 { background:#ff4aeb; } .sw-poly { background:#ff3d3d; }
   .sw-diff { background:#4ade80; } .sw-nwell { border:1px dashed #c9a227; } .sw-contact { background:#ffd60a; }
- 
+
   section { padding:52px 24px; max-width:1080px; margin:0 auto; }
   .eyebrow { font-size:10.5px; color:#4a9eff; letter-spacing:0.08em; margin-bottom:22px; }
   .eyebrow b { color:#ff4aeb; font-weight:600; }
   h2 { font-family:'Inter',sans-serif; font-size:21px; font-weight:700; margin-bottom:24px; }
- 
+
   /* hero */
   #hero { padding-top:36px; }
   .title-wrap { position:relative; display:inline-block; margin-bottom:6px; }
@@ -67,7 +64,7 @@ Portfolio silicon full · HTML
   .btns { display:flex; gap:8px; flex-wrap:wrap; }
   .btn { font-size:11px; padding:10px 16px; border:1px solid #2a3140; background:#0d1117; color:#e8eaed; cursor:pointer; }
   .btn.primary { background:#4a9eff; border-color:#4a9eff; color:#0a0d12; font-weight:700; }
- 
+
   .hero-grid { display:grid; grid-template-columns:1fr; gap:30px; }
   .hero-photo { order:-1; }
   @media (min-width:860px) {
@@ -76,12 +73,12 @@ Portfolio silicon full · HTML
     .hero-text { order:1; }
   }
   .photo-frame { position:relative; border:1px solid #1f2530; max-width:300px; margin:0 auto; }
-  .photo-frame img { width:100%; height:340px; object-fit:cover; display:block; filter:contrast(1.05); }
+  .photo-frame img { width:100%; height:340px; object-fit:cover; object-position:center 12%; display:block; filter:contrast(1.05); }
   .photo-badge { position:absolute; background:#0d1117; border:1px solid #1f2530; padding:7px 11px; font-size:9.5px; font-family:'Inter',sans-serif; white-space:nowrap; }
   .photo-badge.bl { bottom:-10px; left:-10px; color:#4a9eff; font-weight:700; }
   .photo-badge.tr { top:-10px; right:-10px; display:flex; align-items:center; gap:6px; font-weight:600; }
   .pulse-dot { width:6px; height:6px; border-radius:50%; background:#4ade80; box-shadow:0 0 8px #4ade80; flex-shrink:0; display:inline-block; }
- 
+
   /* skills as layer stack */
   .layer-row { border:1px solid #1f2530; border-left:4px solid; padding:14px 16px; margin-bottom:10px; background:#0d1117; }
   .layer-name { font-size:11px; font-weight:600; margin-bottom:8px; letter-spacing:0.04em; }
@@ -92,7 +89,7 @@ Portfolio silicon full · HTML
   .l-diff { border-color:#4ade80; } .l-diff .layer-name { color:#4ade80; }
   .l-nwell { border-color:#c9a227; } .l-nwell .layer-name { color:#c9a227; }
   .l-contact { border-color:#ffd60a; } .l-contact .layer-name { color:#ffd60a; }
- 
+
   .sub-label { font-size:10px; color:#6b7280; letter-spacing:0.12em; margin:26px 0 12px; text-transform:uppercase; font-family:'Inter',sans-serif; }
   .sub-label:first-of-type { margin-top:0; }
   .core-item { border:1px solid #1f2530; border-left:4px solid #4a9eff; background:#0d1117; padding:13px 16px; margin-bottom:9px; }
@@ -101,16 +98,16 @@ Portfolio silicon full · HTML
   .core-dots { font-size:11px; color:#4a9eff; letter-spacing:2px; }
   .core-used { font-family:'Inter',sans-serif; font-size:10.5px; color:#6b7280; }
   .core-used b { color:#4ade80; font-weight:600; }
- 
+
   .exp-heading { font-family:'Inter',sans-serif; font-size:11px; font-weight:700; color:#4a9eff; letter-spacing:0.1em; text-transform:uppercase; margin:26px 0 12px; }
   .exp-heading:first-of-type { margin-top:0; }
   .path-cert { font-family:'Inter',sans-serif; font-size:10.5px; color:#4a9eff; border-bottom:1px solid #4a9eff; margin-top:6px; display:inline-block; }
- 
+
   @media (min-width:760px) {
     .core-grid, .layer-grid, .certs-grid { display:grid; grid-template-columns:1fr 1fr; gap:10px 14px; }
     .core-grid .core-item, .layer-grid .layer-row, .certs-grid .signoff-row { margin-bottom:0; }
   }
- 
+
   /* projects as macro blocks */
   .macro { border:1px solid #1f2530; padding:18px; margin-bottom:14px; background:#0d1117; }
   .macro-top { display:flex; justify-content:space-between; gap:10px; flex-wrap:wrap; margin-bottom:10px; align-items:baseline; }
@@ -135,7 +132,7 @@ Portfolio silicon full · HTML
     .proj-gallery .g-side-box { height:140px; }
   }
   .proj-gallery-empty { border:1px dashed #2a3140; color:#4b5563; font-size:10.5px; padding:16px; text-align:center; margin-bottom:14px; font-family:'Inter',sans-serif; }
- 
+
   /* experience as timing path */
   .path-row { display:flex; gap:14px; padding:14px 0; border-bottom:1px solid #161b22; }
   .path-row:last-child { border-bottom:none; }
@@ -146,7 +143,7 @@ Portfolio silicon full · HTML
   .path-period { font-size:10.5px; color:#4a9eff; white-space:nowrap; }
   .path-sub { font-family:'Inter',sans-serif; font-size:11.5px; color:#6b7280; margin-bottom:8px; }
   .path-bullets { font-family:'Inter',sans-serif; font-size:12px; color:#b0b6c0; line-height:1.85; padding-left:16px; }
- 
+
   /* certs as sign-off */
   .signoff-row { display:flex; justify-content:space-between; align-items:center; gap:10px; padding:11px 14px; border:1px solid #1f2530; margin-bottom:8px; background:#0d1117; flex-wrap:wrap; }
   .signoff-name { font-family:'Inter',sans-serif; font-size:12.5px; color:#e8eaed; }
@@ -154,19 +151,19 @@ Portfolio silicon full · HTML
   .signoff-pass { font-size:9.5px; color:#4ade80; border:1px solid #4ade80; padding:3px 8px; white-space:nowrap; }
   .signoff-right { display:flex; align-items:center; gap:10px; }
   .signoff-view { font-family:'Inter',sans-serif; font-size:10.5px; color:#4a9eff; border-bottom:1px solid #4a9eff; white-space:nowrap; }
- 
+
   /* contact */
   .contact-tagline { font-family:'Inter',sans-serif; font-size:13.5px; color:#b0b6c0; line-height:1.75; margin-bottom:24px; max-width:460px; }
   .contact-links { display:flex; gap:16px; flex-wrap:wrap; font-family:'Inter',sans-serif; font-size:12.5px; }
   .contact-links a { color:#4a9eff; }
   .contact-links a:hover { color:#ff4aeb; }
- 
+
   .coordbar { max-width:1080px; margin:0 auto; padding:10px 24px; border-top:1px solid #1f2530; font-size:9.5px; color:#4b5563; display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px; }
   footer { text-align:center; padding:24px 20px 44px; color:#3a4150; font-size:10.5px; }
 </style>
 </head>
 <body>
- 
+
 <nav>
   <div class="nav-logo">giridhar<span>.gds</span></div>
   <div class="nav-links">
@@ -177,7 +174,7 @@ Portfolio silicon full · HTML
   <span><i class="swatch sw-m1"></i>M1</span><span><i class="swatch sw-m2"></i>M2</span><span><i class="swatch sw-poly"></i>POLY</span>
   <span><i class="swatch sw-diff"></i>DIFF</span><span><i class="swatch sw-nwell"></i>NWELL</span><span><i class="swatch sw-contact"></i>CONTACT</span>
 </div>
- 
+
 <section id="hero">
   <div class="hero-grid">
     <div class="hero-text">
@@ -218,11 +215,11 @@ Portfolio silicon full · HTML
     </div>
   </div>
 </section>
- 
+
 <section id="skills">
   <div class="eyebrow">// LAYER STACK — 6 LAYERS DEFINED</div>
   <h2>Technical Skills</h2>
- 
+
   <div class="sub-label">Core Stack</div>
   <div class="core-grid">
   <div class="core-item"><div class="core-top"><span class="core-name">Cadence Virtuoso 6.1.7</span><span class="core-dots">●●●●○</span></div><div class="core-used">Used in → <b>Dummy Cell Watermarking</b></div></div>
@@ -231,7 +228,7 @@ Portfolio silicon full · HTML
   <div class="core-item"><div class="core-top"><span class="core-name">Python</span><span class="core-dots">●●●●●</span></div><div class="core-used">Used in → <b>Dummy Cell Watermarking, Anti-Deepfake Audio Auth</b></div></div>
   <div class="core-item"><div class="core-top"><span class="core-name">Arduino / ESP32</span><span class="core-dots">●●●●○</span></div><div class="core-used">Used in → <b>Smart Curve Alert System, Anti-Deepfake Audio Auth</b></div></div>
   </div>
- 
+
   <div class="sub-label">Also Familiar With</div>
   <div class="layer-grid">
   <div class="layer-row l-m1"><div class="layer-name">M1 — EDA TOOLS</div><div class="layer-body">KLayout 0.28, Cadence Virtuoso 6.1.7, Assura DRC, Xilinx Vivado, Proteus 8</div></div>
@@ -242,7 +239,7 @@ Portfolio silicon full · HTML
   <div class="layer-row l-contact"><div class="layer-name">CONTACT — SECURITY &amp; OS</div><div class="layer-body">SHA-256, Digital Watermarking, Cryptographic Hashing, Ubuntu 24.04 LTS, Red Hat Linux, VMware</div></div>
   </div>
 </section>
- 
+
 <section id="projects">
   <div class="eyebrow">// MACRO BLOCKS — 3 INSTANTIATED</div>
   <h2>What I've Built</h2>
@@ -255,14 +252,20 @@ Portfolio silicon full · HTML
         <div class="g-side-box"><img src="https://giridhar-vlsi-engineer.github.io/WhatsApp%20Image%202026-05-01%20at%207.14.01%20PM.jpeg" alt="TN-IMPACT 2026 KIT-CBE"></div>
       </div>
     </div>
-    <div class="macro-desc">Two-module embedded hardware system detecting vehicles at blind curves and delivering real-time alerts. Solar-powered roadside transmitter communicates wirelessly to an in-vehicle receiver with LCD and voice output. Working prototype presented at TN-IMPACT 2026, a state-level hackathon by TANCAME, Govt. of Tamil Nadu — Team ASTRIX.</div>
+    <div class="macro-desc">Designed and built a two-module embedded hardware system for real-time vehicle detection at blind road curves. A solar-powered roadside transmitter communicates wirelessly with an in-vehicle receiver, delivering alerts through LCD display and voice output. The working prototype was presented at TN-IMPACT 2026, a state-level hackathon organized by TANCAME under the Government of Tamil Nadu, as part of Team ASTRIX.</div>
     <div class="macro-tags">Arduino Uno, HC-12 Wireless, Ultrasonic Sensors, LCD Display, Voice Module, Solar Power, C++</div>
     <a href="https://github.com/GIRIDHAR-VLSI-Engineer" class="macro-link">VIEW REPOSITORY →</a>
   </div>
   <div class="macro">
     <div class="macro-top"><span class="macro-name">DUMMY_CELL_WATERMARKING</span><span class="macro-status drc-clean">DRC: CLEAN</span></div>
-    <div class="proj-gallery-empty">+ Add project images here</div>
-    <div class="macro-desc">Automated VLSI IP-protection tool embedding owner identity in GDSII layouts via BASE64 + SHA-256. Zero DRC violations on Cadence Virtuoso + GPDK045 45nm. Streamlit web app for attack simulation.</div>
+    <div class="proj-gallery">
+      <div class="g-main"><img src="https://giridhar-vlsi-engineer.github.io/dummy-cell-simulation-output-2.png" alt="PHASE II – Simulation Output 2"></div>
+      <div class="g-side">
+        <div class="g-side-box"><img src="https://giridhar-vlsi-engineer.github.io/dummy-cell-watermark-tool.png" alt="VLSI Watermark Tool — Web App"></div>
+        <div class="g-side-box"><img src="https://giridhar-vlsi-engineer.github.io/dummy-cell-console-output-2.png" alt="Embedder &amp; Reader Console Output 2"></div>
+      </div>
+    </div>
+    <div class="macro-desc">Led the technical implementation of a 3-member team project — designed the watermarking algorithm, built the Streamlit application, and handled DRC verification on Cadence Virtuoso. The tool embeds verifiable ownership identity directly into GDSII layouts using BASE64 encoding and SHA-256 hashing, achieving zero DRC violations on the GPDK045 45nm process.</div>
     <div class="macro-tags">Python, KLayout pya API, Cadence Virtuoso, Assura DRC, Streamlit, SHA-256</div>
     <a href="https://github.com/GIRIDHAR-VLSI-Engineer" class="macro-link">VIEW REPOSITORY →</a>
   </div>
@@ -274,63 +277,69 @@ Portfolio silicon full · HTML
     <span class="macro-link" style="color:#6b7280; border-color:#3a4150;">COMING SOON</span>
   </div>
 </section>
- 
+
 <section id="experience">
   <div class="eyebrow">// TIMING PATH — EDUCATION TO PRESENT</div>
   <h2>Experience &amp; Training</h2>
   <div class="exp-heading">Education</div>
   <div class="path-row"><div class="path-node" style="background:#4a9eff;"></div><div class="path-body">
     <div class="path-top"><span class="path-title">B.E. Electronics Engineering</span><span class="path-period">2023–2027</span></div>
-    <div class="path-sub">S.A. Engineering College · VLSI Design &amp; Technology · CGPA 6.87</div>
+    <div class="path-sub">S.A. Engineering College · VLSI Design &amp; Technology</div>
   </div></div>
- 
+
   <div class="exp-heading">Experience &amp; Training</div>
+  <div class="path-row"><div class="path-node" style="background:#4a9eff;"></div><div class="path-body">
+    <div class="path-top"><span class="path-title">Embedded Systems Engineering Intern — Asyncronix Private Limited</span><span class="path-period">Jun 2026 – Present</span></div>
+    <div class="path-sub">AI-Based Exoskeleton · Incubated at iTNT Hub, Anna University, Chennai</div>
+    <ul class="path-bullets"><li>Own the embedded systems side of Asyncronix's AI-based exoskeleton — handling sensor integration, firmware, and control logic that bring the product's AI capabilities to life on real hardware</li><li>Work hands-on with microcontrollers and sensor systems, translating software-level intelligence into real-time physical response</li><li>Gaining end-to-end exposure to building a wearable robotics product from the incubation stage up, inside one of Tamil Nadu's recognized deep-tech startup ecosystems</li></ul>
+    <a href="https://giridhar-vlsi-engineer.github.io/asyncronix-offer-letter.pdf" class="path-cert">VIEW OFFER LETTER ↗</a>
+  </div></div>
   <div class="path-row"><div class="path-node" style="background:#ff4aeb;"></div><div class="path-body">
-    <div class="path-top"><span class="path-title">Intern — 4SG Technology</span><span class="path-period">2 months</span></div>
-    <div class="path-sub">Hardware Servicing · Canon, Brother, Epson</div>
-    <ul class="path-bullets"><li>Serviced 3–4 machines daily — fuser units, gear assemblies, toner mechanisms</li><li>Certificate + LOR awarded for technical competence</li></ul>
+    <div class="path-top"><span class="path-title">Intern — 4SG Technology</span><span class="path-period">Aug–Nov 2025 (4 mo)</span></div>
+    <div class="path-sub">Hardware Servicing · Authorized Canon &amp; Epson Service Partner</div>
+    <ul class="path-bullets"><li>Completed a 4-month internship in hardware diagnostics and technical support at 4SG Technologies, an authorized Canon &amp; Epson service partner in Chennai</li><li>Diagnosed and repaired 3–4 devices daily, including fuser units, gear assemblies, and toner mechanisms, in a live, fast-paced service environment</li><li>Recognized with a certificate and letter of recommendation for technical competence, discipline, and reliability</li></ul>
     <a href="https://giridhar-vlsi-engineer.github.io/4sg-certificate.pdf" class="path-cert">VIEW CERTIFICATE ↗</a>
   </div></div>
   <div class="path-row"><div class="path-node" style="background:#ff3d3d;"></div><div class="path-body">
-    <div class="path-top"><span class="path-title">Associate — MaestroMinds</span><span class="path-period">30d + ongoing</span></div>
+    <div class="path-top"><span class="path-title">Associate — MaestroMinds</span><span class="path-period">Intern → Associate (Ongoing)</span></div>
     <div class="path-sub">Hardware Projects · Remote (Zoho Cliq)</div>
-    <ul class="path-bullets"><li>Contributed to 2 real-time client hardware projects</li><li>Retained post-internship with stipend on delivery</li></ul>
+    <ul class="path-bullets"><li>Delivered technical contributions across two live client hardware projects within a fast-paced, remote-first team environment</li><li>Retained beyond the internship period on a stipend basis in recognition of consistent project delivery</li></ul>
     <a href="https://giridhar-vlsi-engineer.github.io/maestrominds-certificate.pdf" class="path-cert">VIEW CERTIFICATE ↗</a>
   </div></div>
   <div class="path-row"><div class="path-node" style="background:#4ade80;"></div><div class="path-body">
-    <div class="path-top"><span class="path-title">Trainee — MSME-DFO Guindy, Govt. of India</span><span class="path-period">30 days</span></div>
-    <div class="path-sub">ESDP — IoT &amp; Embedded Systems</div>
-    <ul class="path-bullets"><li>Arduino Uno R3, Nano, ESP32 — architecture and use cases</li><li>Applied directly in SCAS hardware prototype</li></ul>
+    <div class="path-top"><span class="path-title">Trainee — CITD Extension Centre, Guindy, Chennai</span><span class="path-period">Nov 2025–Jan 2026 (6 wk)</span></div>
+    <div class="path-sub">Entrepreneurship-cum-Skill Development Programme (E-SDP) — Emerging IoT Applications · MSME-TC-CITD Hyderabad</div>
+    <ul class="path-bullets"><li>Received structured training in IoT and embedded systems architecture, covering Arduino Uno R3, Nano, and ESP32 platforms and their real-world applications</li><li>Directly applied this training to develop the hardware prototype for the Smart Curve Alert System</li></ul>
     <a href="https://giridhar-vlsi-engineer.github.io/msme-dfo-certificate.pdf" class="path-cert">VIEW CERTIFICATE ↗</a>
   </div></div>
   <div class="path-row"><div class="path-node" style="background:#c9a227;"></div><div class="path-body">
-    <div class="path-top"><span class="path-title">Inplant Trainee — Chennai Port Authority</span><span class="path-period">6 days</span></div>
+    <div class="path-top"><span class="path-title">Inplant Trainee — Chennai Port Authority</span><span class="path-period">16–21 Jun 2025</span></div>
     <div class="path-sub">M&amp;E Engineering · Electronics &amp; Communication</div>
-    <ul class="path-bullets"><li>Trained across EDP, Electrical, Mechanical, Electronics divisions</li></ul>
+    <ul class="path-bullets"><li>Completed cross-functional training across EDP, Electrical, Mechanical, and Electronics divisions within live port infrastructure operations</li></ul>
     <a href="https://giridhar-vlsi-engineer.github.io/chennai-port-certificate.pdf" class="path-cert">VIEW CERTIFICATE ↗</a>
   </div></div>
   <div class="path-row"><div class="path-node" style="background:#ffd60a;"></div><div class="path-body">
     <div class="path-top"><span class="path-title">Printing Technician — Printzo World</span><span class="path-period">since 2023</span></div>
     <div class="path-sub">Print Operations · Customer Handling · Part-time ongoing</div>
-    <ul class="path-bullets"><li>Managed 150+ customers on peak days as sole operator</li></ul>
+    <ul class="path-bullets"><li>Independently manage daily print operations and customer service, handling 150+ customer interactions on peak days alongside full-time academics</li></ul>
   </div></div>
 </section>
- 
+
 <section id="certs">
   <div class="eyebrow">// SIGN-OFF CHECKLIST — 4 VERIFIED</div>
   <h2>Certifications</h2>
   <div class="certs-grid">
   <div class="signoff-row"><div><div class="signoff-name">Python Masterclass</div><div class="signoff-issuer">MRL Tech Solutions Pvt. Ltd.</div></div><div class="signoff-right"><a href="https://giridhar-vlsi-engineer.github.io/python-masterclass-cert.pdf" class="signoff-view">VIEW ↗</a><span class="signoff-pass">PASS</span></div></div>
   <div class="signoff-row"><div><div class="signoff-name">PCB Design (Hands-on)</div><div class="signoff-issuer">Pantech eLearning Pvt. Ltd.</div></div><div class="signoff-right"><a href="https://giridhar-vlsi-engineer.github.io/pcb-design-cert.pdf" class="signoff-view">VIEW ↗</a><span class="signoff-pass">PASS</span></div></div>
-  <div class="signoff-row"><div><div class="signoff-name">Verilog HDL</div><div class="signoff-issuer">Pantech eLearning Pvt. Ltd.</div></div><div class="signoff-right"><a href="https://giridhar-vlsi-engineer.github.io/verilog-hdl-cert.pdf" class="signoff-view">VIEW ↗</a><span class="signoff-pass">PASS</span></div></div>
+  <div class="signoff-row"><div><div class="signoff-name">Advanced Verilog HDL</div><div class="signoff-issuer">Pantech eLearning Pvt. Ltd.</div></div><div class="signoff-right"><a href="https://giridhar-vlsi-engineer.github.io/verilog-hdl-cert.pdf" class="signoff-view">VIEW ↗</a><span class="signoff-pass">PASS</span></div></div>
   <div class="signoff-row"><div><div class="signoff-name">VLSI Design Flow — RTL to GDS</div><div class="signoff-issuer">ChipXpert Technologies Pvt. Ltd.</div></div><div class="signoff-right"><a href="https://giridhar-vlsi-engineer.github.io/vlsi-design-flow-cert.pdf" class="signoff-view">VIEW ↗</a><span class="signoff-pass">PASS</span></div></div>
   </div>
 </section>
- 
+
 <section id="contact">
   <div class="eyebrow">// READY FOR TAPE-OUT</div>
   <h2>Let's Connect</h2>
-  <div class="contact-tagline">Final-year student actively seeking internship or full-time roles in VLSI Design or Embedded Systems. Based in Chennai — open to relocation across India.</div>
+  <div class="contact-tagline">Open to full-time, part-time, or internship opportunities in VLSI/RTL Design or Embedded Systems, anywhere in India. Always ready to learn new things and continuously update my skills.</div>
   <div class="contact-links">
     <a href="mailto:giridharsridharan11@gmail.com">giridharsridharan11@gmail.com</a>
     <a href="https://www.linkedin.com/in/giridhar-s-6a0010373">LinkedIn</a>
@@ -338,18 +347,9 @@ Portfolio silicon full · HTML
     <a href="https://wa.me/9150310513">WhatsApp</a>
   </div>
 </section>
- 
+
 <div class="coordbar"><span>X: 000.000 &nbsp; Y: 000.000</span><span>LAYER: M1 &nbsp; SCALE: 1:1 &nbsp; GRID: 0.5µm</span></div>
 <footer>giridhar-vlsi-engineer.github.io · Chennai, India</footer>
- 
+
 </body>
 </html>
- 
-
-
-
-
-
-
-
-
