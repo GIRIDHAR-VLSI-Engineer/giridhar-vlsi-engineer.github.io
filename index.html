@@ -132,6 +132,9 @@
     .proj-gallery .g-side-box { height:140px; }
   }
   .proj-gallery-empty { border:1px dashed #2a3140; color:#4b5563; font-size:10.5px; padding:16px; text-align:center; margin-bottom:14px; font-family:'Inter',sans-serif; }
+  .proj-gallery.screenshots { background:#fff; }
+  .proj-gallery.screenshots .g-main img,
+  .proj-gallery.screenshots .g-side-box img { object-fit:contain; background:#fff; }
 
   /* experience as timing path */
   .path-row { display:flex; gap:14px; padding:14px 0; border-bottom:1px solid #161b22; }
@@ -197,7 +200,7 @@
       <div class="pins">
         <div class="pin"><span class="pin-num">3</span><span class="pin-label">Projects</span></div>
         <div class="pin"><span class="pin-num">5+</span><span class="pin-label">Intern &amp; Training</span></div>
-        <div class="pin"><span class="pin-num">4</span><span class="pin-label">Certs</span></div>
+        <div class="pin"><span class="pin-num">6</span><span class="pin-label">Certs</span></div>
         <div class="pin"><span class="pin-num">'27</span><span class="pin-label">Grad</span></div>
       </div>
       <div class="btns">
@@ -252,17 +255,18 @@
         <div class="g-side-box"><img src="https://giridhar-vlsi-engineer.github.io/WhatsApp%20Image%202026-05-01%20at%207.14.01%20PM.jpeg" alt="TN-IMPACT 2026 KIT-CBE"></div>
       </div>
     </div>
-    <div class="macro-desc">Designed and built a two-module embedded hardware system for real-time vehicle detection at blind road curves. A solar-powered roadside transmitter communicates wirelessly with an in-vehicle receiver, delivering alerts through LCD display and voice output. The working prototype was presented at TN-IMPACT 2026, a state-level hackathon organized by TANCAME under the Government of Tamil Nadu, as part of Team ASTRIX.</div>
+    <div class="macro-desc">Designed and built a two-module embedded hardware system for real-time vehicle detection at blind road curves. A solar-powered roadside transmitter communicates wirelessly with an in-vehicle receiver, delivering alerts through LCD display and voice output. The working prototype was presented at TN-IMPACT 2026, a state-level hackathon organized by TANCAM under the Government of Tamil Nadu, as part of Team ASTRIX.</div>
     <div class="macro-tags">Arduino Uno, HC-12 Wireless, Ultrasonic Sensors, LCD Display, Voice Module, Solar Power, C++</div>
     <a href="https://github.com/GIRIDHAR-VLSI-Engineer" class="macro-link">VIEW REPOSITORY →</a>
+    <a href="https://giridhar-vlsi-engineer.github.io/Tancam-cert.pdf" class="macro-link" style="margin-left:14px;">VIEW HACKATHON CERTIFICATE ↗</a>
   </div>
   <div class="macro">
-    <div class="macro-top"><span class="macro-name">DUMMY_CELL_WATERMARKING</span><span class="macro-status drc-clean">DRC: CLEAN</span></div>
-    <div class="proj-gallery">
-      <div class="g-main"><img src="https://giridhar-vlsi-engineer.github.io/dummy-cell-simulation-output-2.png" alt="PHASE II – Simulation Output 2"></div>
+    <div class="macro-top"><span class="macro-name">Python-Based Layout-Level Dummy Cell Watermarking for IP Protection</span><span class="macro-status drc-clean">DRC: CLEAN</span></div>
+    <div class="proj-gallery screenshots">
+      <div class="g-main"><img src="https://giridhar-vlsi-engineer.github.io/dummy-cell-comparison-table.png" alt="Complete Verification Table — 100% Detection Rate, 0 DRC Violations"></div>
       <div class="g-side">
-        <div class="g-side-box"><img src="https://giridhar-vlsi-engineer.github.io/dummy-cell-watermark-tool.png" alt="VLSI Watermark Tool — Web App"></div>
-        <div class="g-side-box"><img src="https://giridhar-vlsi-engineer.github.io/dummy-cell-console-output-2.png" alt="Embedder &amp; Reader Console Output 2"></div>
+        <div class="g-side-box"><img src="https://giridhar-vlsi-engineer.github.io/dummy-cell-embedder-interface.png" alt="Watermark Embedder Interface"></div>
+        <div class="g-side-box"><img src="https://giridhar-vlsi-engineer.github.io/dummy-cell-simulation-output-2.png" alt="PHASE II – Simulation Output 2"></div>
       </div>
     </div>
     <div class="macro-desc">Led the technical implementation of a 3-member team project — designed the watermarking algorithm, built the Streamlit application, and handled DRC verification on Cadence Virtuoso. The tool embeds verifiable ownership identity directly into GDSII layouts using BASE64 encoding and SHA-256 hashing, achieving zero DRC violations on the GPDK045 45nm process.</div>
@@ -292,7 +296,6 @@
     <div class="path-top"><span class="path-title">Embedded Systems Engineering Intern — Asyncronix Private Limited</span><span class="path-period">Jun 2026 – Present</span></div>
     <div class="path-sub">AI-Based Exoskeleton · Incubated at iTNT Hub, Anna University, Chennai</div>
     <ul class="path-bullets"><li>Own the embedded systems side of Asyncronix's AI-based exoskeleton — handling sensor integration, firmware, and control logic that bring the product's AI capabilities to life on real hardware</li><li>Work hands-on with microcontrollers and sensor systems, translating software-level intelligence into real-time physical response</li><li>Gaining end-to-end exposure to building a wearable robotics product from the incubation stage up, inside one of Tamil Nadu's recognized deep-tech startup ecosystems</li></ul>
-    <a href="https://giridhar-vlsi-engineer.github.io/asyncronix-offer-letter.pdf" class="path-cert">VIEW OFFER LETTER ↗</a>
   </div></div>
   <div class="path-row"><div class="path-node" style="background:#ff4aeb;"></div><div class="path-body">
     <div class="path-top"><span class="path-title">Intern — 4SG Technology</span><span class="path-period">Aug–Nov 2025 (4 mo)</span></div>
@@ -326,13 +329,15 @@
 </section>
 
 <section id="certs">
-  <div class="eyebrow">// SIGN-OFF CHECKLIST — 4 VERIFIED</div>
+  <div class="eyebrow">// SIGN-OFF CHECKLIST — 6 VERIFIED</div>
   <h2>Certifications</h2>
   <div class="certs-grid">
   <div class="signoff-row"><div><div class="signoff-name">Python Masterclass</div><div class="signoff-issuer">MRL Tech Solutions Pvt. Ltd.</div></div><div class="signoff-right"><a href="https://giridhar-vlsi-engineer.github.io/python-masterclass-cert.pdf" class="signoff-view">VIEW ↗</a><span class="signoff-pass">PASS</span></div></div>
   <div class="signoff-row"><div><div class="signoff-name">PCB Design (Hands-on)</div><div class="signoff-issuer">Pantech eLearning Pvt. Ltd.</div></div><div class="signoff-right"><a href="https://giridhar-vlsi-engineer.github.io/pcb-design-cert.pdf" class="signoff-view">VIEW ↗</a><span class="signoff-pass">PASS</span></div></div>
   <div class="signoff-row"><div><div class="signoff-name">Advanced Verilog HDL</div><div class="signoff-issuer">Pantech eLearning Pvt. Ltd.</div></div><div class="signoff-right"><a href="https://giridhar-vlsi-engineer.github.io/verilog-hdl-cert.pdf" class="signoff-view">VIEW ↗</a><span class="signoff-pass">PASS</span></div></div>
   <div class="signoff-row"><div><div class="signoff-name">VLSI Design Flow — RTL to GDS</div><div class="signoff-issuer">ChipXpert Technologies Pvt. Ltd.</div></div><div class="signoff-right"><a href="https://giridhar-vlsi-engineer.github.io/vlsi-design-flow-cert.pdf" class="signoff-view">VIEW ↗</a><span class="signoff-pass">PASS</span></div></div>
+  <div class="signoff-row"><div><div class="signoff-name">Envision — Intercollegiate Buildathon</div><div class="signoff-issuer">IEEE Computer Society, SSN Student Branch</div></div><div class="signoff-right"><a href="https://giridhar-vlsi-engineer.github.io/ssn-hackathon-cert.pdf" class="signoff-view">VIEW ↗</a><span class="signoff-pass">PASS</span></div></div>
+  <div class="signoff-row"><div><div class="signoff-name">IETE Student Member</div><div class="signoff-issuer">Institution of Electronics &amp; Telecommunication Engineers · Valid Jan 2025–Jan 2028</div></div><div class="signoff-right"><a href="https://giridhar-vlsi-engineer.github.io/members-IETE.pdf" class="signoff-view">VIEW ↗</a><span class="signoff-pass">PASS</span></div></div>
   </div>
 </section>
 
